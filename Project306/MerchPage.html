@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PlanetCSS.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>Merch</title>
+</head>
+
+<script>
+    $(document).ready(function(){
+    $("#theflex img").click(function(){
+        $(this).animate({"opacity": 0.1}, "3000")
+    })
+    $("#theflex h2").click(function(){
+        $("#theflex img").animate({"opacity": 1}, "3000")
+    })
+})    
+
+</script>
+<body>
+    <section class="header">
+        <img id="sunImg" src="images/Sun.png" alt="The Sun">
+        <nav>
+            <ul>
+                <li><a href="PlanetWebsite.html">Home</a></li>
+                <li><a href="MerchPage.html">Merch</a></li>
+                <li><a href="RegisterPage.html">Register</a></li>
+                <li><a href="ContactPage.html">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <div id="theflex">
+        <div class="flex-container1">
+          <div>
+          <img src="images/AstronautGlobe.png" alt="AstronautGlobe" width="300" height="350"></a>
+          <p> <br> </br> <h2> Astronaut Snow Globe </h2> <br> </br> <h3> 6.49 $ </h3> </p>
+          </div>
+          <div><img src="images/LavaLamp.png" alt="LavaLamp" width="300" height="350"></a>
+          <p> <br> </br> <h2> Galaxy Lava Lamp </h2> <br> </br> <h3> 34.99 $ </h3> </p></div>
+          <div><img src="images/NeilArmstrong.png" alt="NeilArmstrong" width="300" height="350"></a>
+          <p> <br> </br> <h2> Life of Neil Armstrong </h2> <br> </br> <h3> 6.99 $ </h3></p></div>
+        </div>
+        
+        <div class="flex-container2">
+          <div>
+          <img src="images/NasaPatches.png" alt="NasaPatches" width="300" height="350"></a>
+          <p> <br> </br> <h2> Nasa Iron on Patches </h2> <br> </br> <h3> 7.99 $ </h3> </p> </div>
+          <div><img src="images/PlanetPuzzle.png" alt="PlanetPuzzle" width="300" height="350"></a>
+          <p> <br> </br> <h2> Planetary Vision Puzzle </h2> <br> </br> <h3> 15.99 $ </h3> </p></div> 
+          <div><img src="images/SFETee.png" alt="SFETee" width="300" height="350"></a>
+          <p> <br> </br> <h2> Space for Everyone Tee </h2> <br> </br> <h3> 23.99 $ </h3> </p></div>
+        </div>
+
+        <div class="flex-container3">
+            <div>
+            <img src="images/SpaceBackpack.png" alt="SpaceBackpack" width="300" height="350"></a>
+            <p> <br> </br> <h2> Space Cadet Small Backpack </h2> <br> </br> <h3> 13.99 $ </h3> </p> </div>
+            <div><img src="images/SwarmRising.png" alt="SwarmRising" width="300" height="350"></a>
+            <p> <br> </br> <h2> Swarm Rising </h2> <br> </br> <h3> 12.99 $ </h3> </p></div> 
+            <div><img src="images/SenHoodie.png" alt="SenHoodie" width="300" height="350"></a>
+            <p> <br> </br> <h2> Grey Sen Hoodie </h2> <br> </br> <h3> 34.99 $ </h3> </p></div>
+        </div>
+    </div>
+
+    <div id="footer">
+        &copy; 2021, Loris Duka Space Page
+        <p> All trademarks and registered trademarks appearing on </p>
+        <p> site are the property of their respective owners.</p>
+    </div>
+</body>
+</html>

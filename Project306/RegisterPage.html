@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PlanetCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Login</title>
+</head>
+
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            
+        $.ajax({
+        // the URL for the request
+        url : 'user.php',
+    
+        // the data to send
+        // (will be converted to a query string)
+        data : { username : $("#showuser").val()},
+    
+        // whether this is a POST or GET request
+        type : 'GET',
+    
+    
+    
+        // code to run if the request succeeds;
+        // the response is passed to the function
+        success : function(response) {
+            $('p').html(response);
+        },
+    
+        // code to run if the request fails;
+        // the raw request and status codes are
+        // passed to the function
+        error : function(xhr, status) {
+            alert('Sorry, there was a problem!');
+        }
+    
+    });	
+            
+            
+        });
+    $("form").submit(function(){
+        $.ajax({
+            url:"storeuser.php",
+            type : 'POST',
+            data : { Name : $("#name").val(), SurName: $("#surname").val(), Email: $("#email").val()},
+            complete : function(response) {
+            alert('User added');
+        },
+    
+        // code to run if the request fails;
+        // the raw request and status codes are
+        // passed to the function
+        error : function(xhr, status) {
+            alert('Sorry, there was a problem!');
+        }
+        })
+        
+    });
+    
+    });
+</script>
+
+<body>
+    <section class="header">
+        <img id="sunImg" src="images/Sun.png" alt="The Sun">
+        <nav>
+            <ul>
+                <li><a href="PlanetWebsite.html">Home</a></li>
+                <li><a href="MerchPage.html">Merch</a></li>
+                <li><a href="RegisterPage.html">Register</a></li>
+                <li><a href="ContactPage.html">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+
+
+</section>
+
+<section id="reg">
+    <form name="registerForm" action="#" method="post" onSubmit="return register()">
+    <h1>Register</h1>    
+    <p>Name <input type="text" name="Name" id="name" ></p>
+    <p>SurName <input type="text" name="SurName" id="surname" ></p>
+    <p>E-mail <input type="text" name="Email"  id="email"> </p>
+    <p>Password <input type="text" name="Password"  id="password"> </p>
+    <p><span>Male <input type="radio" name="rad" id="male" value = "Male"> Female <input type="radio" name="rad" id="female"value="Female" ></span></p>
+    <button type="register" value="Register" onsubmit="showData()">Register</button>
+    </form>
+    Search user <input type="text" id="showuser">
+    <button> Show Users</button>
+</section>
+
+<script src="Mercury.js"></script>
+
+<div id="footer">
+    &copy; 2021, Loris Duka Space Page
+    <p> All trademarks and registered trademarks appearing on </p>
+    <p> site are the property of their respective owners.</p>
+</div>
+</body>
+</html>

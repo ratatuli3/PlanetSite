@@ -1,0 +1,846 @@
+body { 
+    background-color: black;
+    font-family:      'Courier New', Courier, monospace;
+    font-size:        small;
+    margin:           0px;
+    line-height:      1.5em;
+    background-image: url("images/SpaceSky.png");
+    width: 1200px;
+    margin: auto;
+
+    /*This lets us remove all extra space on the website*/
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+
+/*Change the image of the sun to fit the website*/
+.header img {
+    width: 100%;
+}
+
+/*Changing the list itself to the position needed*/
+.header ul {
+    position: absolute;
+    top: -1%;
+    left: 23%;
+    overflow: hidden;
+}
+
+.header li {
+    display: inline;
+    padding: 20px;
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+.header a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: 16px 16px;
+    text-align: center;
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-shadow: 0 0 5px black; 
+}
+
+#main section{
+    margin-top: 10px;
+    color: white;
+    height: 400px;
+    font-size: 2rem;
+}
+
+#main h1:hover{
+    text-shadow: 0 0 5px white; 
+}
+
+
+.mercury img {
+    height: 250px;
+    margin: 5%;
+}
+
+.mercury img:hover {
+    transition: 0.3s linear;
+    transform: scale(1.6);
+}
+
+.mercury h1 {
+    display: inline;
+    position: absolute;
+    margin-top: 11%;
+}
+
+.venus img {
+    height: 270px;
+    margin: 75%;
+    margin-top: 0%;
+}
+
+.venus img:hover {
+    transition: 0.3s linear;
+    transform: scale(1.6);
+}
+
+.venus h1 {
+    display: inline;
+    position: absolute;
+    left: 65%;
+    margin-top: 7%;
+}
+
+.earth img {
+    height: 320px;
+    margin: 5%;
+    margin-top: 0%;
+}
+
+.earth img:hover {
+    transition: 0.3s linear;
+    transform: scale(1.6);
+}
+
+.earth h1 {
+    display: inline;
+    position: absolute;
+    margin-top: 8%;
+}
+
+.mars img {
+    height: 280px;
+    margin: 75%;
+    margin-top: 0%;
+}
+
+.mars img:hover {
+    transition: 0.3s linear;
+    transform: scale(1.6);
+}
+
+.mars h1 {
+    display: inline;
+    position: absolute;
+    left: 65%;
+    margin-top: 7%;
+}
+
+.jupiter img {
+    height: 400px;
+    margin: 5%;
+    margin-top: 0%;
+}
+
+.jupiter img:hover {
+    transition: 0.3s linear;
+    transform: scale(1.6);
+}
+
+.jupiter h1 {
+    display: inline;
+    position: absolute;
+    margin-top: 10%;
+}
+
+.saturn img {
+    height: 380px;
+    margin: 75%;
+    margin-top: 0%;
+}
+
+.saturn img:hover {
+    transition: 0.3s linear;
+    transform: scale(1.6);
+}
+
+.saturn h1 {
+    display: inline;
+    position: absolute;
+    left: 65%;
+    margin-top: 9%;
+}
+
+.uranus img {
+    height: 350px;
+    margin: 5%;
+    margin-top: 0%;
+}
+
+.uranus img:hover {
+    transition: 0.3s linear;
+    transform: scale(1.6);
+}
+
+.uranus h1 {
+    display: inline;
+    position: absolute;
+    margin-top: 9%;
+}
+
+.neptune img {
+    height: 360px;
+    margin: 75%;
+    margin-top: 0%;
+}
+
+.neptune img:hover {
+    transition: 0.3s linear;
+    transform: scale(1.6);
+}
+
+.neptune h1 {
+    display: inline;
+    position: absolute;
+    left: 60%;
+    margin-top: 9%;
+}
+
+.mercuryReal h1{
+    display: inline;
+    position: absolute;
+    margin-top: 10px;
+    color: white;
+    height: 400px;
+    font-size: 2rem;
+}
+
+.mercuryReal p{
+    display: inline;
+    position: absolute;
+    margin-top: 40px;
+    margin-right: 10%;
+    color: white;
+    height: 400px;
+    font-size: 1.2rem;
+}
+
+.mercuryReal h2{
+    display: inline;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 250px;
+    color: white;
+    height: 400px;
+    font-size: 1.4rem;
+}
+
+.mercuryReal h3{
+    position: absolute;
+    color: white;
+    margin: 3%;
+    margin-top: -8%;
+    height: 400px;
+    font-size: 1.2rem;
+}
+
+.mercuryReal a:hover{
+    text-shadow: 0 0 5px white; 
+}
+
+.mercuryReal img {
+    height: 350px;
+    margin: 10%;
+    margin-top: 0%;
+}
+
+/*Lowering the opacity on hover more slowly*/
+#mercuryRealImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#mercuryRealImg:hover {
+    opacity: 0.7;
+}
+
+/*Setting up the Modal*/
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/*The zooming in*/
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.8s;
+}
+
+/*How big will the initial image be before it gets zoomed it to how much it will*/
+@keyframes zoom {
+    from {transform:scale(0.2)}
+    to {transform:scale(1)}
+}
+
+/*Close button*/
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/*Making the button pretty*/
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.flex-container1, .flex-container2, .flex-container3 {
+    display: flex;
+    padding-left: 22%;
+    padding-top: 0px;
+    margin: 0px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 2px white;
+}
+
+.flex-container1 h3:hover{
+    text-shadow: 0 0 10px white;
+}
+
+.flex-container2 h3:hover{
+    text-shadow: 0 0 10px white;
+}
+
+.flex-container3 h3:hover{
+    text-shadow: 0 0 10px white;
+}
+
+.flex-container1 > div {
+    margin: 20px;
+    padding: 0px;
+}
+  
+  
+.flex-container2 > div {
+    margin: 20px;
+    padding: 0px;
+}
+
+.flex-container3 > div {
+    margin: 20px;
+    padding: 0px;
+}
+
+#reg {
+    color: white;
+    text-shadow: 0 0 10px white;
+    margin-left: 40%;
+}
+
+#reg #name{
+    margin-left: 6.1%;
+}
+
+#reg #surname{
+    margin-left: 4.1%;
+}
+
+#reg #email{
+    margin-left: 4.75%;
+}
+
+#reg #password{
+    margin-left: 3.5%;
+}
+
+#reg span{
+    margin-left: 9%;
+}
+
+#reg h1{
+    margin-left: 10%;
+}
+
+#reg .register{
+    position: absolute;
+    top: 37.8%;
+    left: 58%;
+}
+
+.card {
+    background: #ab604a;
+    padding: 0 20px;
+    margin: 0 10px;
+    width: calc(33% - 20px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.3rem;
+    border: double 7px black;
+}
+
+.card:hover img{
+    transition: 0.3s linear;
+    transform: scale(1.6);
+}
+
+.card p{
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.card a{
+    text-decoration: none;
+    color: white;
+}
+
+.card:hover p {
+    max-height: 40px;
+    opacity: 1;
+    text-shadow: 0 0 10px white;
+}
+
+.satelliteTable h1{
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
+.satelliteTable table{
+    color: white;
+    text-shadow: 0 0 10px white;
+    margin-left: 0%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.satelliteTable td, th {
+    border: 3px solid white;
+    text-align: left;
+    padding: 8px;
+  }
+  
+.satelliteTable tr:nth-child(even) {
+    background-color: gray;
+  }
+
+.slideshow-container h1, a{
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+  
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.venusVideo {
+    text-align: center;
+    text-shadow: 0 0 3px white; 
+    color: white;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+  
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+  
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+  
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid gray;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+  
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+  
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+  
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+  
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+  
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+  
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+  
+
+/* Place the timelime to the left */
+.timeline::after {
+    left: 31px;
+}
+  
+/* Full-width containers */
+.container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+}
+  
+/* Make sure that all arrows are pointing leftwards */
+.container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+  
+/* Make sure all circles are at the same spot */
+.left::after, .right::after {
+    left: 15px;
+}
+  
+/* Make all right containers behave like the left ones */
+.right {
+    left: 0%;
+}
+
+.marsText h1{
+    color: white;
+    text-shadow: 0 0 5px white;
+    position: absolute;
+    left: 10%;
+    margin-top: 10%;
+}
+
+.jupiterReal h1{
+    display: inline;
+    position: absolute;
+    margin-top: 10px;
+    color: white;
+    height: 400px;
+    font-size: 2rem;
+}
+
+.jupiterReal p{
+    display: inline;
+    position: absolute;
+    margin-top: 40px;
+    margin-right: 10%;
+    color: white;
+    height: 400px;
+    font-size: 1.2rem;
+}
+
+.jupiterReal h2{
+    display: inline;
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 250px;
+    color: white;
+    height: 400px;
+    font-size: 1.4rem;
+}
+
+.jupiterReal a:hover{
+    text-shadow: 0 0 5px white; 
+}
+
+.jupiterReal img {
+    height: 350px;
+    margin: 10%;
+    margin-top: 0%;
+}
+
+.checked {
+    color: orange;
+}
+
+.stars{
+    position: absolute;
+    left: 46%;
+    top: 63%;
+}
+
+.beforeStar{
+    display: inline;
+    position: absolute;
+    left: 39%;
+    top: 61.8%;
+    font-size: 1.5rem;
+}
+
+.saturnReal h1{
+    text-align: center;
+    color: white;
+    height: 20px;
+    font-size: 2rem;
+}
+
+.saturnReal button{
+    display: inline;
+    position: absolute;
+    margin-top: 40px;
+    margin-right: 10%;
+    color: white;
+    height: 400px;
+    font-size: 1.2rem;
+}
+
+.saturnReal h2{
+    display: inline;
+    position: absolute;
+    margin-top: -3%;
+    margin-left: 15%;
+    color: white;
+    width: 400px;
+    font-size: 1.4rem;
+}
+
+.saturnReal a:hover{
+    text-shadow: 0 0 5px white; 
+}
+
+.saturnReal img {
+    height: 350px;
+    position: middle;
+    margin-top: 0%;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: gray;
+    text-shadow: 0 0 2px white;
+    color: white;
+    border: double 7px black;
+    cursor: pointer;
+    padding: 18px;
+    text-align: center;
+    width: 100%;
+    outline: none;
+    transition: 0.4s;
+    font-size: 2rem;
+    margin-top: 0%;
+}
+  
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: rgb(160, 158, 158);
+}
+  
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: gold;
+    display: none;
+    border: double 7px black;
+    overflow: hidden;
+    font-size: 1.2rem;
+}
+
+.uranusReal h1{
+    display: inline;
+    position: absolute;
+    margin-top: 10px;
+    color: white;
+    height: 400px;
+    font-size: 2rem;
+}
+
+.uranusReal p{
+    display: inline;
+    position: absolute;
+    margin-top: 40px;
+    margin-right: 10%;
+    color: white;
+    height: 400px;
+    font-size: 1.2rem;
+}
+
+.uranusReal h2{
+    display: inline;
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 250px;
+    color: white;
+    height: 400px;
+    font-size: 1.4rem;
+}
+
+.uranusReal a:hover{
+    text-shadow: 0 0 5px white; 
+}
+
+.uranusReal img {
+    height: 350px;
+    margin: 10%;
+    margin-top: 0%;
+}
+
+#footer {
+    text-align: center;
+    color: white;
+    height: 400px;
+    font-size: 1rem;
+    text-shadow: 0 0 5px white; 
+}

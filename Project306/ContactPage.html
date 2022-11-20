@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PlanetCSS.css">
+    <title>Contact</title>
+</head>
+<body>
+    <section class="header">
+        <img id="sunImg" src="images/Sun.png" alt="The Sun">
+        <nav>
+            <ul>
+                <li><a href="PlanetWebsite.html">Home</a></li>
+                <li><a href="MerchPage.html">Merch</a></li>
+                <li><a href="RegisterPage.html">Register</a></li>
+                <li><a href="ContactPage.html">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <div class="contact-container">
+     <div class ="contact-info">
+            
+     </div>
+
+    <script>
+        class Planet{
+        id;
+        name;
+        distance;
+        constructor(id,name,distance){
+            this.id=id
+            this.name=name;
+            this.distance=distance;
+        }
+    }
+
+    let myPlanets=[]
+
+    let data = `[{"id":"pl1", "name":"Mars", "distance":"3002323km"}, {"id":"pl2", "name":"Pluto", "distance":"841235745km"}, {"id":"pl3", "name":"Venus", "distance":"12544400km"}]`
+
+
+    let parseddata=JSON.parse(data)
+    for(let object of parseddata){
+        let planet1=new Planet(object.id,object.name,object.distance)
+        myPlanets.push(planet1)
+    }
+
+    for(let Planet of myPlanets){
+
+        let myplanetdiv=document.createElement("div")
+        myplanetdiv.style.background="linear-gradient(to bottom, black 0%, white 100%)"
+        myplanetdiv.style.border="2px solid black"
+        let pid=document.createElement("p")
+        pid.innerText=Planet.id
+        let pname=document.createElement("p")
+        pname.innerText=Planet.name
+        let pdistance=document.createElement("p")
+        pdistance.innerText=Planet.distance
+        myplanetdiv.appendChild(pname)
+        myplanetdiv.appendChild(pdistance)
+        document.getElementById("contact-info").appendChild(myplanetdiv)
+
+    }
+    </script>
+
+    <div id="footer">
+        &copy; 2021, Loris Duka Space Page
+        <p> All trademarks and registered trademarks appearing on </p>
+        <p> site are the property of their respective owners.</p>
+    </div>
+</body>
+</html>
